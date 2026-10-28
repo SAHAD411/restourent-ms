@@ -1,11 +1,11 @@
 import "server-only";
 
 const timeoutMs = 15_000;
+// Server-only endpoint for the existing deployed Apps Script.
+const appsScriptUrl = "https://script.google.com/macros/s/AKfycbzB-mDqWU5-GY-6J5fPsvf0elkY0MSzN80oGvmAnl2o4b2G1kR-T7Vgkz8V7pkHSf_Y/exec";
 
 function endpoint(action: "items" | "orders") {
-  const base = process.env.GOOGLE_APPS_SCRIPT_URL;
-  if (!base) throw new Error("Google Apps Script URL is not configured.");
-  const url = new URL(base);
+  const url = new URL(appsScriptUrl);
   url.searchParams.set("action", action);
   return url;
 }
@@ -26,7 +26,5 @@ async function request(url: URL, init?: RequestInit): Promise<unknown> {
 
 export function getExternal(action: "items" | "orders") { return request(endpoint(action)); }
 export function postExternal(action: "addItem" | "addOrder", data: unknown) {
-  const base = process.env.GOOGLE_APPS_SCRIPT_URL;
-  if (!base) throw new Error("Google Apps Script URL is not configured.");
-  return request(new URL(base), { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ action, data }) });
+  return request(new URL(appsScriptUrl), { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ action, data }) });
 }

@@ -14,13 +14,7 @@ Next.js App Router POS frontend connected server-side to the existing Google App
 npm install
 ```
 
-Create `.env.local` in the project root and set the server-only variable:
-
-```dotenv
-GOOGLE_APPS_SCRIPT_URL=https://script.google.com/macros/s/your-deployment-id/exec
-```
-
-`.env.local` is ignored by Git. Use `.env.example` as a template in other environments. Do not prefix this variable with `NEXT_PUBLIC_`.
+The existing Apps Script endpoint is configured as a server-only constant in `lib/apps-script.ts`, so no `.env` file is required. The spreadsheet ID is not used by this app; the deployed Apps Script already accesses its configured spreadsheet.
 
 Start the development server:
 
@@ -39,7 +33,7 @@ npm start
 
 ## Deploy
 
-Before deploying, add `GOOGLE_APPS_SCRIPT_URL` to the deployment provider's server-side environment settings. For Vercel, add it under **Project Settings → Environment Variables**, then redeploy. If the GitHub repository is connected to the host, pushing a commit triggers its configured deployment; the ignored local `.env.local` is never uploaded. The deployed site cannot reach Google Sheets until this server-side variable is configured.
+The Apps Script endpoint is part of the server bundle. Deploy the app normally. Because the endpoint supports write actions, keep the GitHub repository private or move the endpoint back to a server-side environment variable before publishing the source publicly.
 
 Lint with:
 
@@ -66,7 +60,7 @@ Only a successful HTTP response with valid JSON and no explicit Apps Script erro
 
 ## Troubleshooting
 
-- Check `.env.local` exists and the variable name is exactly `GOOGLE_APPS_SCRIPT_URL`; restart Next.js after changing it.
+- Confirm `lib/apps-script.ts` contains the correct deployed Apps Script endpoint and restart/redeploy Next.js after changing it.
 - Open `/api/items` and `/api/orders` locally to inspect sanitized errors.
 - Confirm the deployed web app is accessible to the server and is returning JSON for both GET actions and POST requests.
 - For non-JSON responses, HTTP errors, or timeouts, inspect server terminal diagnostics. Production responses intentionally avoid stack traces and environment values.
