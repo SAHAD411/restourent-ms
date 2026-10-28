@@ -75,3 +75,4 @@ Only a successful HTTP response with valid JSON and no explicit Apps Script erro
 ## Stitch source
 
 The original source and screenshots remain under `stitch_savor_restaurant_pos_ui/`. The Next.js app uses the included visual language; no fabricated menu data is shipped.
+# restourent-ms
