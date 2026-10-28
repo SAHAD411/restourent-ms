@@ -20,7 +20,7 @@ Create `.env.local` in the project root and set the server-only variable:
 GOOGLE_APPS_SCRIPT_URL=https://script.google.com/macros/s/your-deployment-id/exec
 ```
 
-The configured deployment URL is already present in the local `.env.local` created for this workspace. `.env.local` is ignored by Git. Use `.env.example` as a template in other environments. Do not prefix this variable with `NEXT_PUBLIC_`.
+`.env.local` is ignored by Git. Use `.env.example` as a template in other environments. Do not prefix this variable with `NEXT_PUBLIC_`.
 
 Start the development server:
 
@@ -36,6 +36,10 @@ Create and run the production build:
 npm run build
 npm start
 ```
+
+## Deploy
+
+Before deploying, add `GOOGLE_APPS_SCRIPT_URL` to the deployment provider's server-side environment settings. For Vercel, add it under **Project Settings → Environment Variables**, then redeploy. If the GitHub repository is connected to the host, pushing a commit triggers its configured deployment; the ignored local `.env.local` is never uploaded. The deployed site cannot reach Google Sheets until this server-side variable is configured.
 
 Lint with:
 
