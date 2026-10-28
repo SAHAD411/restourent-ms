@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#f6fbf5","inverse-on-surface":"#edf2ed","on-secondary-fixed-variant":"#444844","on-background":"#181d1a","surface-container-lowest":"#ffffff","on-surface-variant":"#594139","surface-container-high":"#e5e9e4","primary-container":"#cb4914","primary":"#a73400","surface-variant":"#dfe4df","outline":"#8d7168","on-tertiary-fixed-variant":"#852300","surface-container-low":"#f0f5f0","on-primary":"#ffffff","on-primary-fixed":"#390c00","surface-dim":"#d7dbd6","secondary":"#5b5f5c","surface":"#f6fbf5","outline-variant":"#e1bfb5","tertiary-container":"#ca4a20","on-tertiary":"#ffffff","secondary-fixed-dim":"#c4c7c3","on-error":"#ffffff","primary-fixed-dim":"#ffb59c","background":"#f6fbf5","on-secondary-container":"#606460","tertiary-fixed":"#ffdbd0","on-secondary":"#ffffff","on-primary-container":"#fffbff","tertiary-fixed-dim":"#ffb59f","on-secondary-fixed":"#191c1a","surface-container":"#ebefea","on-primary-fixed-variant":"#822700","primary-fixed":"#ffdbcf","error-container":"#ffdad6","secondary-container":"#dde0dc","inverse-primary":"#ffb59c","error":"#ba1a1a","tertiary":"#a83206","on-surface":"#181d1a","inverse-surface":"#2c322e","on-error-container":"#93000a","surface-container-highest":"#dfe4df","on-tertiary-fixed":"#3a0a00","surface-tint":"#ab3600","on-tertiary-container":"#fffbff","secondary-fixed":"#e0e3df"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"1rem","space-xl":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","space-lg":"1.5rem",gutter:"1rem","margin-desktop":"2rem","space-md":"1rem"},fontFamily:{"label-md":["Plus Jakarta Sans"],"currency-display":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"600"}],"currency-display":["1.5rem",{lineHeight:"1.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"body-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"400"}],"body-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"display-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["1.25rem",{lineHeight:"1.625rem",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["1.125rem",{lineHeight:"1.5rem",fontWeight:"600"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[24px]">restaurant</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface tracking-tight leading-none">Savor Restaurant</span><span class="font-label-md text-label-md text-on-surface-variant leading-none mt-1">POS Terminal #03</span></div></div><div class="hidden xl:flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container"><span class="material-symbols-outlined text-primary text-[18px]">table_restaurant</span><span class="font-label-lg text-label-lg text-on-surface">Table T-04</span><span class="text-outline-variant">•</span><span class="font-body-md text-body-md text-on-surface-variant">Server Alex</span></div></div><div class="hidden md:flex flex-1 max-w-md items-center"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search dishes, drinks, tickets..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="hidden lg:flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface-variant">Kitchen Live</span></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[14px]">wifi</span><span class="font-label-md text-label-md text-on-surface-variant">Wi-Fi Online</span></div></div><nav class="flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-lg"><a class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-lg text-label-lg" data-path="menu-catalog" href="#">Menu Catalog</a><a class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-lg text-label-lg" data-path="active-cart-and-checkout" href="#">Active Cart &amp; Checkout</a></nav><div class="flex items-center gap-space-md pl-space-sm"><div class="relative"><button class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Alex M.</span><span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Floor Captain</span></div></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-lg"><div class="px-space-md"><div class="px-space-md mb-space-md font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Floor &amp; Service</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-label-lg text-label-lg"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="floor-plan" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Floor Plan</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="menu-catalog" href="#"><span class="material-symbols-outlined text-[20px]">restaurant_menu</span>Menu Catalog</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="active-cart-and-checkout" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span>Active Ticket</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="kitchen-display-system" href="#"><span class="material-symbols-outlined text-[20px]">soup_kitchen</span>Kitchen Queue</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="shift-summary" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span>Shift Summary</a></nav></div><div class="px-space-md"><div class="p-space-md rounded-xl bg-surface-container-high/60 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">Active Shift</span><span class="font-label-md text-label-md text-primary font-bold">5h 42m</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">Open Tickets</span><span class="font-label-lg text-label-lg text-on-surface">12 Orders</span></div></div></div></aside><div class="pl-64"><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="w-full px-margin-desktop py-space-md flex flex-col gap-space-md">
+<!-- Top POS Subheader Bar -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-lg text-label-lg active:scale-95" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Menu</span>
+</a>
+<div class="h-6 w-px bg-surface-variant"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Ticket #1042</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-md text-label-md">Active Order</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Created 14:26 • Terminal #03 • Station Main Kitchen</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Service Type Selector Toggle -->
+<div class="inline-flex p-1 bg-surface-container-low rounded-xl">
+<button class="px-space-md py-1.5 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-space-xs" id="mode-dinein" onclick="switchService('Dine-In')">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+<span>Dine-In</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs" id="mode-takeaway" onclick="switchService('Takeaway')">
+<span class="material-symbols-outlined text-[16px]">takeout_dining</span>
+<span>Takeaway</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs" id="mode-delivery" onclick="switchService('Delivery')">
+<span class="material-symbols-outlined text-[16px]">moped</span>
+<span>Delivery</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px]">table_restaurant</span>
+<div class="flex flex-col leading-none">
+<span class="font-label-md text-label-md text-on-surface">Table T-04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Server: Alex M.</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high/60">
+<span class="material-symbols-outlined text-secondary text-[18px]">group</span>
+<span class="font-label-md text-label-md text-on-surface">Guests: 3</span>
+</div>
+</div>
+</section>
+<!-- Main Workspace Split: 65% Cart & Processing, 35% Billing Ledger -->
+<div class="w-full grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Cart Line Items, Notes, Promo & Payment Method (65%) -->
+<section class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Line Items Card Container -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface">Selected Items</span>
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center" id="badge-count">3</span>
+</div>
+<button class="text-error hover:bg-error-container/40 px-space-sm py-1 rounded-lg transition-colors font-label-md text-label-md flex items-center gap-1" onclick="clearTicket()">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Void All</span>
+</button>
+</div>
+<!-- Items List -->
+<div class="flex flex-col gap-space-md" id="cart-list">
+<!-- Item 1: Biryani -->
+<div class="group relative bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md hover:bg-surface-container transition-all" id="item-row-1">
+<div class="flex items-center gap-space-md flex-1 min-w-0">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="Steaming authentic Hyderabadi chicken dum biryani in a traditional clay pot garnished with fried onions, fragrant mint leaves, saffron rice, and roasted whole spices, warm commercial culinary photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAuZX5SjyFZZQBavu2JyxRT08ATxUYSOdEQefQC5hDzSKM3U-ZJIxlLIiThu99DaUKPA1AHGQ-RCFklB8ZZ9yGQxpRG5f7OUWK1iR8TYZOWyWwEn14MaoxOa-kAt443D1YGnM1pw2MA8z65ZC4XM2ZgJEOsNavdJmfAy13bDNjvVModatOmYIdw8jIcv1F82R37lndiwfQPERxq-zFVBeI4lUYId0yGmPwlyq29j0"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-md text-[10px] text-primary">KOT 1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Hyderabadi Chicken Biryani</span>
+<span class="w-2 h-2 rounded-full bg-error inline-block" title="Non-Veg"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dum-cooked fragrant basmati, bone-in chicken, saffron</span>
+<!-- Item Specific Modifier Note -->
+<div class="mt-1 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[15px]">edit_note</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed/40 px-2 py-0.5 rounded" id="note-1-text">Extra spicy • Extra Raita requested</span>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface underline" onclick="editItemNote(1)">Edit</button>
+</div>
+</div>
+</div>
+<!-- Quantity Stepper & Price -->
+<div class="flex items-center justify-between sm:justify-end gap-space-lg shrink-0">
+<div class="flex items-center bg-surface-container-highest rounded-lg p-0.5">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-lowest active:scale-95 transition-all" onclick="updateQty(1, -1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-9 text-center font-currency-display text-base text-on-surface" id="qty-1">1</span>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-lowest active:scale-95 transition-all" onclick="updateQty(1, 1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="text-right min-w-[70px]">
+<span class="font-currency-display text-currency-display text-on-surface" id="line-total-1">₹299</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant leading-none">@ ₹299</span>
+</div>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30 flex items-center justify-center transition-colors" onclick="removeItem(1)">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Margherita Pizza -->
+<div class="group relative bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md hover:bg-surface-container transition-all" id="item-row-2">
+<div class="flex items-center gap-space-md flex-1 min-w-0">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="Stone oven artisanal Margherita pizza with charred blistered sourdough crust, bubbling fresh fior di latte mozzarella, rich San Marzano tomato sauce, and green basil leaves, warm food magazine styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhjAbk3F5E87k3Orh1soiubSPs6nmmFVm3vGYL9AOifDe1bgm5udkZAl-7LcGqU2xNHvhNanLSJUrcply2roMou92TY4hyJk5072AetRlNAFspgJkVzj6SNEFfjy3Hskrwj9sR3Vq9KzRBdjzXfDVKTJPXv-Y-zZt4qdjFdHsnEdfmTkpL-ikru-BJi_fHjnL_dSQDxkHUw9ag2ihUIx2qGEQPKajNKuriCRppcBY"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-md text-[10px] text-primary">KOT 1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Artisanal Margherita Pizza</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block" title="Veg"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sourdough base, San Marzano marinara, fresh basil</span>
+<div class="mt-1 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[15px]">edit_note</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic" id="note-2-text">Crispy crust requested</span>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface underline" onclick="editItemNote(2)">Edit</button>
+</div>
+</div>
+</div>
+<!-- Quantity Stepper & Price -->
+<div class="flex items-center justify-between sm:justify-end gap-space-lg shrink-0">
+<div class="flex items-center bg-surface-container-highest rounded-lg p-0.5">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-lowest active:scale-95 transition-all" onclick="updateQty(2, -1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-9 text-center font-currency-display text-base text-on-surface" id="qty-2">1</span>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-lowest active:scale-95 transition-all" onclick="updateQty(2, 1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="text-right min-w-[70px]">
+<span class="font-currency-display text-currency-display text-on-surface" id="line-total-2">₹249</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant leading-none">@ ₹249</span>
+</div>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30 flex items-center justify-center transition-colors" onclick="removeItem(2)">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Mint Lime Soda -->
+<div class="group relative bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md hover:bg-surface-container transition-all" id="item-row-3">
+<div class="flex items-center gap-space-md flex-1 min-w-0">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="Chilled sparkling fresh mint lime soda in an elegant highball glass filled with clear ice cubes, fresh lime wheels, crushed mint, water condensation droplets, bright ambient beverage photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzkg7nEWj8cYNo4yIlNU3M4oGjqAawmx8t0_1T81y2hbl9pzESt0loCuBWiqJ7QWARpFOeEz6zT3fgY-51HxELg_AlNdjiuDuq-NzBpRiX3lBH2hfdW6ubSne-ypqjy5_ew5XiyTRpeBwiW5Hwa8p5sw3KZ1tMPcSryMu36Z_unFjP8P0EnUtq9QyGdmezasddZumk8qkMgfS1Xy6VxXqC2-f7L2pXCnnjdS9FYTU"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-md text-[10px] text-primary">BAR 1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Fresh Mint Lime Soda</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block" title="Beverage"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Carbonated soda, crushed garden mint, black salt</span>
+<div class="mt-1 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[15px]">edit_note</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic" id="note-3-text">Sweet &amp; Salt blend</span>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface underline" onclick="editItemNote(3)">Edit</button>
+</div>
+</div>
+</div>
+<!-- Quantity Stepper & Price -->
+<div class="flex items-center justify-between sm:justify-end gap-space-lg shrink-0">
+<div class="flex items-center bg-surface-container-highest rounded-lg p-0.5">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-lowest active:scale-95 transition-all" onclick="updateQty(3, -1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-9 text-center font-currency-display text-base text-on-surface" id="qty-3">1</span>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-lowest active:scale-95 transition-all" onclick="updateQty(3, 1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="text-right min-w-[70px]">
+<span class="font-currency-display text-currency-display text-on-surface" id="line-total-3">₹79</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant leading-none">@ ₹79</span>
+</div>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30 flex items-center justify-center transition-colors" onclick="removeItem(3)">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Item Add-on shortcuts -->
+<div class="pt-space-xs flex flex-wrap items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Quick Suggestions:</span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md flex items-center gap-1" onclick="quickAddItem('Garlic Naan', 60)">
+<span class="material-symbols-outlined text-[16px]">add</span> + Garlic Naan (₹60)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md flex items-center gap-1" onclick="quickAddItem('Gulab Jamun (2 pcs)', 90)">
+<span class="material-symbols-outlined text-[16px]">add</span> + Gulab Jamun (₹90)
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md flex items-center gap-1" onclick="quickAddItem('Mineral Water 1L', 40)">
+<span class="material-symbols-outlined text-[16px]">add</span> + Water 1L (₹40)
+            </button>
+</div>
+</div>
+<!-- Special Instructions & Kitchen Notes -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-on-surface flex items-center gap-space-xs" for="kitchen-notes">
+<span class="material-symbols-outlined text-primary text-[20px]">outdoor_grill</span>
+              Special Cooking Instructions &amp; Allergy Notes
+            </label>
+<span class="font-label-md text-label-md text-on-surface-variant">Printed on KOT</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all resize-none" id="kitchen-notes" placeholder="E.g., No peanuts for guest 2, serve biryani and pizza simultaneously, dressing on side..." rows="3"></textarea>
+<div class="absolute bottom-2 right-2 flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">mic</span> Voice input supported
+            </div>
+</div>
+</div>
+<!-- Promo Code & Discounts -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">sell</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block">Discounts &amp; Vouchers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Apply staff discount or promo code</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm max-w-md w-full">
+<div class="relative flex-1">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface uppercase placeholder:normal-case placeholder:text-on-surface-variant font-label-lg text-label-lg outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="promo-input" placeholder="E.G. SAVOR10, STAFF15" type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface" id="clear-promo-btn" onclick="clearPromo()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<button class="h-11 px-space-lg bg-surface-container text-on-surface hover:bg-surface-container-high rounded-xl font-label-lg text-label-lg transition-all active:scale-95 shrink-0 flex items-center gap-1" onclick="applyPromo()">
+<span>Apply</span>
+</button>
+</div>
+</div>
+<!-- Payment Method Selection Grid -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Tender &amp; Payment Method</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Ready for Billing</span>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-sm" id="tender-tabs">
+<!-- Cash -->
+<button class="payment-btn p-space-md rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex flex-col items-center justify-center gap-2 border-2 border-transparent text-center group" id="pay-cash" onclick="selectPayment('cash')">
+<span class="material-symbols-outlined text-[28px] text-primary">payments</span>
+<span class="font-label-lg text-label-lg">Cash</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Drawer opens</span>
+</button>
+<!-- Card / POS Terminal -->
+<button class="payment-btn p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-sm transition-all flex flex-col items-center justify-center gap-2 border-2 border-primary text-center" id="pay-card" onclick="selectPayment('card')">
+<span class="material-symbols-outlined text-[28px] text-primary-fixed">credit_card</span>
+<span class="font-label-lg text-label-lg text-inverse-on-surface">POS Card</span>
+<span class="font-body-sm text-body-sm text-surface-dim">Tap / EMV Chip</span>
+</button>
+<!-- UPI / Dynamic QR -->
+<button class="payment-btn p-space-md rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex flex-col items-center justify-center gap-2 border-2 border-transparent text-center group" id="pay-upi" onclick="selectPayment('upi')">
+<span class="material-symbols-outlined text-[28px] text-primary">qr_code_2</span>
+<span class="font-label-lg text-label-lg">UPI / QR</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant verify</span>
+</button>
+<!-- Split Bill -->
+<button class="payment-btn p-space-md rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex flex-col items-center justify-center gap-2 border-2 border-transparent text-center group" id="pay-split" onclick="selectPayment('split')">
+<span class="material-symbols-outlined text-[28px] text-primary">call_split</span>
+<span class="font-label-lg text-label-lg">Split Bill</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3-Way split</span>
+</button>
+</div>
+<!-- Dynamic Tender Contextual Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between gap-space-md" id="tender-note-box">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">contactless</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">POS Terminal #2 Ready</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Swipe, tap, or insert chip card on reader device.</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">Reader Synced</span>
+</div>
+</div>
+</section>
+<!-- Right Column: Sticky Order & Billing Summary Panel (35%) -->
+<aside class="xl:col-span-4 flex flex-col gap-space-lg xl:sticky xl:top-20">
+<!-- Main Ledger Receipt Card -->
+<div class="w-full bg-surface-container-lowest rounded-2xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Billing Ledger</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Order #1042 • GST Registered</span>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md">Unsettled</span>
+</div>
+<!-- Price Calculation Stack -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Item Subtotal (3 items)</span>
+<span class="font-label-lg text-label-lg text-on-surface" id="summary-subtotal">₹627.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-body-md text-body-md text-on-surface-variant">GST &amp; Taxes (5.0%)</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant cursor-pointer" title="CGST 2.5% + SGST 2.5%">info</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface" id="summary-gst">₹31.35</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Service &amp; Hospitality Fee</span>
+<span class="font-label-lg text-label-lg text-on-surface" id="summary-service">₹25.00</span>
+</div>
+<div class="hidden flex items-center justify-between text-primary" id="discount-row">
+<span class="font-body-md text-body-md">Voucher Discount</span>
+<span class="font-label-lg text-label-lg" id="summary-discount">-₹0.00</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Round-off Adjustment</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">-₹0.35</span>
+</div>
+<div class="my-space-xs h-px bg-surface-variant"></div>
+<!-- Grand Total Highlight -->
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block">Total Payable</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inclusive of all local levies</span>
+</div>
+<span class="font-display-lg text-display-lg text-primary tracking-tight" id="summary-total">₹683</span>
+</div>
+</div>
+<!-- Split Breakdown Widget -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">pie_chart</span>
+<span class="font-body-sm text-body-sm text-on-surface">3-way Split estimate:</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold" id="per-person">₹227.66 / person</span>
+</div>
+<!-- Action Stack -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Primary Action Button: Charge & Send to KDS -->
+<button class="w-full min-h-[52px] py-space-md px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-space-sm" id="btn-fire" onclick="fireOrderToKitchen()">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+<span id="fire-label">Confirm &amp; Fire to Kitchen (₹683)</span>
+</button>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="min-h-[44px] py-2 px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-all font-label-lg text-label-lg flex items-center justify-center gap-1 active:scale-95" onclick="printKOT()">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Print KOT / Bill</span>
+</button>
+<button class="min-h-[44px] py-2 px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-all font-label-lg text-label-lg flex items-center justify-center gap-1 active:scale-95" onclick="holdOrder()">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+<span>Hold Ticket</span>
+</button>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">security</span>
+<span class="font-body-sm text-[11px]">PCI-DSS Compliant • Shift Logged by Alex M.</span>
+</div>
+</div>
+<!-- Shift & Floor Context Mini Widget -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">room_service</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">KDS Station 1: Normal Load</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Average prep turnaround: 14 mins</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+</aside>
+</div>
+</div>
+<!-- Live Modal: Order Sent to Kitchen / Confirmation Details -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="order-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl p-space-xl shadow-xl flex flex-col gap-space-lg transform transition-all scale-95 duration-200" id="modal-card">
+<!-- Success Icon & Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">soup_kitchen</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface block leading-tight">Order Fired to Kitchen!</span>
+<span class="font-body-md text-body-md text-on-surface-variant">KOT Generated • Order #1042</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- KOT Dispatch Details Box -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface pb-2 border-b border-surface-container-high">
+<span class="font-label-lg text-label-lg">Routing Stations</span>
+<span class="font-label-md text-label-md text-primary">Main Kitchen &amp; Bar Dispatch</span>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between text-sm">
+<span class="font-body-md text-body-md text-on-surface">1× Hyderabadi Chicken Biryani <span class="text-primary text-xs">(Extra Spicy)</span></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Station: Curry</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="font-body-md text-body-md text-on-surface">1× Artisanal Margherita Pizza</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Station: Oven</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="font-body-md text-body-md text-on-surface">1× Fresh Mint Lime Soda</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Station: Bar</span>
+</div>
+</div>
+<div class="mt-2 pt-2 border-t border-surface-container-high flex items-center justify-between text-xs text-on-surface-variant">
+<span>Table T-04 • Server Alex</span>
+<span>Timestamp: Just now</span>
+</div>
+</div>
+<!-- Settlement Status -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Payment Status</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modal-tender-type">POS Card (Pre-Authorized)</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">Total: ₹683</span>
+</div>
+<!-- Modal Footer CTA -->
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 min-h-[46px] rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all" onclick="closeModalAndNewTicket()">
+          Start Next Order
+        </button>
+<button class="min-h-[46px] px-space-lg rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-all flex items-center gap-1" onclick="printKOTReceipt()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+          Print KOT Copy
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Inline Script for POS Cart Calculations -->
+<script>
+    const itemPrices = {
+      1: 299,
+      2: 249,
+      3: 79
+    };
+
+    let itemQuantities = {
+      1: 1,
+      2: 1,
+      3: 1
+    };
+
+    let appliedDiscount = 0;
+    let selectedTender = 'card';
+
+    function recalculateTotals() {
+      let subtotal = 0;
+      let activeItemCount = 0;
+
+      for (let id in itemQuantities) {
+        if (itemQuantities[id] > 0) {
+          subtotal += itemQuantities[id] * itemPrices[id];
+          activeItemCount += itemQuantities[id];
+        }
+      }
+
+      const gst = subtotal > 0 ? (subtotal * 0.05) : 0;
+      const service = subtotal > 0 ? 25 : 0;
+      const totalRaw = subtotal + gst + service - appliedDiscount;
+      const grandTotal = Math.max(0, Math.round(totalRaw));
+
+      // DOM Updates
+      const subtotalEl = document.getElementById('summary-subtotal');
+      const gstEl = document.getElementById('summary-gst');
+      const serviceEl = document.getElementById('summary-service');
+      const totalEl = document.getElementById('summary-total');
+      const fireLabel = document.getElementById('fire-label');
+      const badgeCount = document.getElementById('badge-count');
+      const perPerson = document.getElementById('per-person');
+
+      if (subtotalEl) subtotalEl.textContent = '₹' + subtotal.toFixed(2);
+      if (gstEl) gstEl.textContent = '₹' + gst.toFixed(2);
+      if (serviceEl) serviceEl.textContent = '₹' + service.toFixed(2);
+      if (totalEl) totalEl.textContent = '₹' + grandTotal;
+      if (fireLabel) fireLabel.textContent = `Confirm & Fire to Kitchen (₹${grandTotal})`;
+      if (badgeCount) badgeCount.textContent = activeItemCount;
+      if (perPerson) perPerson.textContent = '₹' + (grandTotal / 3).toFixed(2) + ' / person';
+    }
+
+    function updateQty(id, delta) {
+      if (!itemQuantities[id]) itemQuantities[id] = 0;
+      itemQuantities[id] = Math.max(0, itemQuantities[id] + delta);
+
+      const qtyEl = document.getElementById('qty-' + id);
+      const lineTotalEl = document.getElementById('line-total-' + id);
+      const rowEl = document.getElementById('item-row-' + id);
+
+      if (itemQuantities[id] === 0) {
+        if (rowEl) rowEl.classList.add('opacity-40');
+      } else {
+        if (rowEl) rowEl.classList.remove('opacity-40');
+      }
+
+      if (qtyEl) qtyEl.textContent = itemQuantities[id];
+      if (lineTotalEl) lineTotalEl.textContent = '₹' + (itemQuantities[id] * itemPrices[id]);
+
+      recalculateTotals();
+    }
+
+    function removeItem(id) {
+      itemQuantities[id] = 0;
+      const rowEl = document.getElementById('item-row-' + id);
+      if (rowEl) {
+        rowEl.style.display = 'none';
+      }
+      recalculateTotals();
+    }
+
+    function clearTicket() {
+      if (confirm('Void all items for Ticket #1042?')) {
+        for (let id in itemQuantities) {
+          removeItem(id);
+        }
+      }
+    }
+
+    function editItemNote(id) {
+      const noteEl = document.getElementById('note-' + id + '-text');
+      const current = noteEl ? noteEl.textContent : '';
+      const updated = prompt('Modifier / Chef note for item:', current);
+      if (updated !== null && noteEl) {
+        noteEl.textContent = updated;
+      }
+    }
+
+    function switchService(type) {
+      const modes = ['dinein', 'takeaway', 'delivery'];
+      modes.forEach(m => {
+        const btn = document.getElementById('mode-' + m);
+        if (btn) {
+          btn.className = "px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs";
+        }
+      });
+
+      const activeKey = type.toLowerCase().replace(/[^a-z]/g, '');
+      const activeBtn = document.getElementById('mode-' + activeKey);
+      if (activeBtn) {
+        activeBtn.className = "px-space-md py-1.5 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-space-xs";
+      }
+    }
+
+    function selectPayment(method) {
+      selectedTender = method;
+      const keys = ['cash', 'card', 'upi', 'split'];
+      keys.forEach(k => {
+        const btn = document.getElementById('pay-' + k);
+        if (btn) {
+          btn.className = "payment-btn p-space-md rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex flex-col items-center justify-center gap-2 border-2 border-transparent text-center group";
+        }
+      });
+
+      const current = document.getElementById('pay-' + method);
+      if (current) {
+        current.className = "payment-btn p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-sm transition-all flex flex-col items-center justify-center gap-2 border-2 border-primary text-center";
+      }
+
+      const noteBox = document.getElementById('tender-note-box');
+      if (noteBox) {
+        const textMap = {
+          cash: 'Ready for cash collection. Open drawer key mapped.',
+          card: 'Swipe, tap, or insert chip card on POS terminal #2.',
+          upi: 'Dynamic UPI QR Code will prompt on customer-facing display.',
+          split: 'Split ticket 3-ways: ₹227.66 per person.'
+        };
+        noteBox.innerHTML = `
+          <div class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-primary text-[20px]">info</span>
+            <div class="flex flex-col">
+              <span class="font-label-md text-label-md text-on-surface">Payment: ${method.toUpperCase()} Selected</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">${textMap[method]}</span>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">Configured</span>
+        `;
+      }
+    }
+
+    function applyPromo() {
+      const code = document.getElementById('promo-input').value.trim().toUpperCase();
+      const discountRow = document.getElementById('discount-row');
+      const discountVal = document.getElementById('summary-discount');
+      const clearBtn = document.getElementById('clear-promo-btn');
+
+      if (code === 'SAVOR10') {
+        appliedDiscount = 62.7;
+        discountRow.classList.remove('hidden');
+        discountVal.textContent = '-₹62.70 (10% Off)';
+        clearBtn.classList.remove('hidden');
+        recalculateTotals();
+      } else if (code.length > 0) {
+        alert('Invalid or expired coupon code. Try "SAVOR10"');
+      }
+    }
+
+    function clearPromo() {
+      appliedDiscount = 0;
+      document.getElementById('promo-input').value = '';
+      document.getElementById('discount-row').classList.add('hidden');
+      document.getElementById('clear-promo-btn').classList.add('hidden');
+      recalculateTotals();
+    }
+
+    function quickAddItem(name, price) {
+      alert(`Quick added "${name}" (₹${price}) to ticket #1042`);
+    }
+
+    function fireOrderToKitchen() {
+      const modal = document.getElementById('order-modal');
+      const modalTender = document.getElementById('modal-tender-type');
+      if (modalTender) {
+        modalTender.textContent = `${selectedTender.toUpperCase()} Tendered`;
+      }
+      if (modal) {
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('order-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function closeModalAndNewTicket() {
+      closeModal();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function printKOT() {
+      alert('Kitchen Order Ticket (KOT #1042) dispatched to Kitchen Thermal Printer #1');
+    }
+
+    function printKOTReceipt() {
+      alert('Customer copy printing...');
+      closeModal();
+    }
+
+    function holdOrder() {
+      alert('Order #1042 placed on HOLD. Table T-04 kept open.');
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "error": "#ba1a1a", "primary-fixed-dim": "#ffb59c", "on-primary-fixed": "#390c00", "surface-container-low": "#f0f5f0", "inverse-on-surface": "#edf2ed", "inverse-primary": "#ffb59c", "secondary-fixed-dim": "#c4c7c3", "secondary-container": "#dde0dc", "primary": "#a73400", "on-secondary-fixed-variant": "#444844", "tertiary-fixed": "#ffdbd0", "on-error": "#ffffff", "on-secondary-container": "#606460", "background": "#f6fbf5", "on-surface": "#181d1a", "on-secondary-fixed": "#191c1a", "surface-container-high": "#e5e9e4", "tertiary-container": "#ca4a20", "primary-container": "#cb4914", "outline": "#8d7168", "surface": "#f6fbf5", "outline-variant": "#e1bfb5", "secondary": "#5b5f5c", "primary-fixed": "#ffdbcf", "on-secondary": "#ffffff", "on-background": "#181d1a", "on-primary-fixed-variant": "#822700", "surface-bright": "#f6fbf5", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "tertiary": "#a83206", "surface-tint": "#ab3600", "surface-variant": "#dfe4df", "surface-container-lowest": "#ffffff", "inverse-surface": "#2c322e", "on-surface-variant": "#594139", "error-container": "#ffdad6", "on-tertiary-container": "#fffbff", "secondary-fixed": "#e0e3df", "on-tertiary-fixed-variant": "#852300", "surface-dim": "#d7dbd6", "tertiary-fixed-dim": "#ffb59f", "on-tertiary-fixed": "#3a0a00", "surface-container-highest": "#dfe4df", "on-primary-container": "#fffbff", "surface-container": "#ebefea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "currency-display": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.015em", fontWeight: "600" }], "currency-display": ["1.5rem", { lineHeight: "1.75rem", letterSpacing: "-0.02em", fontWeight: "700" }], "title-md": ["1.25rem", { lineHeight: "1.625rem", letterSpacing: "-0.01em", fontWeight: "600" }], "display-lg": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.02em", fontWeight: "600" }], "title-sm": ["1.125rem", { lineHeight: "1.5rem", fontWeight: "600" }], "body-md": ["0.875rem", { lineHeight: "1.25rem", fontWeight: "400" }], "body-lg": ["1rem", { lineHeight: "1.5rem", fontWeight: "400" }], "body-sm": ["0.75rem", { lineHeight: "1rem", fontWeight: "400" }], "headline-lg-mobile": ["1.375rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Savor Restaurant Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5RDL9uBLYzJ30OKIU7UPvd0Nt4zL9JZPS9H8m7M4xx2EK6wQpYjyMXvEq54ul8cihHCgKPI0ednw-lg6-jbIHmm6TETR-gqFU5w5dhlxhaGSWhKqOJGQqTTYBjpVeibX89SMRor-RlFZW1ueotdPQjuFPUFC-ci2MxX0JodUpZLaPJoL9wk39exitsfPNVBrOCstW6MfkxoUIKBccygI6nqmG5_xW8xkbBLNIxQ0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface truncate">Savor Restaurant</span><span class="font-label-md text-label-md text-on-surface-variant truncate hidden sm:inline">• Menu</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">table_restaurant</span><span class="font-body-sm text-body-sm truncate">T-04 • Server Alex</span></div></div></div><div class="flex items-center gap-space-sm shrink-0"><a class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface active:scale-95" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-primary text-on-primary font-label-md text-label-md rounded-full flex items-center justify-center">3</span></a><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIgyYDB6SahafVEA1ezb0CdICySb8sswGj1xMTA-fppgE_5bx94uyI9wPiXZtKP_eUXHlxvGdGGi_oBSd2ady92hTr7V_4YKk1Sv7PuJEEQB_cSuVz0kKiYPtQCogM1aLlOCtQ-KnoI8lXqFPj_Rn5zSX7Ct-cHyqZPlsYZpjhxiOvr5hJUhGKVwhr9zDG_mv8RJx5tsIzXRdKySHySyttU4abkR7yjH7wvqE_aNQ"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-20 select-none">
+<!-- Search & Filter Controls -->
+<div class="sticky top-0 z-30 pt-space-sm pb-space-md bg-surface/90 backdrop-blur-md flex flex-col gap-space-sm">
+<div class="relative w-full flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-on-surface-variant pointer-events-none text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-10 rounded-xl bg-surface-container text-on-surface placeholder:text-on-surface-variant/70 font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-sm" id="menu-search-input" placeholder="Search dishes, drinks, appetizers..." type="text"/>
+<button aria-label="Clear search" class="absolute right-space-sm p-1 text-on-surface-variant hover:text-on-surface hidden transition-opacity" id="clear-search-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Category Pills Ribbon -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5" id="category-pills">
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-inverse-surface text-inverse-on-surface shadow-sm" data-category="all">
+        All Items
+      </button>
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-category="starters">
+        Starters
+      </button>
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-category="main">
+        Main Course
+      </button>
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-category="pizza">
+        Pizza
+      </button>
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-category="burgers">
+        Burgers
+      </button>
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-category="desserts">
+        Desserts
+      </button>
+<button class="category-pill shrink-0 px-space-md h-9 rounded-full font-label-md text-label-md flex items-center justify-center transition-all bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-category="beverages">
+        Beverages
+      </button>
+</div>
+</div>
+<!-- Active Status / Count Banner -->
+<div class="flex items-center justify-between py-space-xs text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span id="active-category-label">All Offerings</span>
+<span class="text-outline-variant">•</span>
+<span id="results-count-text">8 delicious items ready</span>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-md">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Live Kitchen</span>
+</div>
+</div>
+<!-- Menu Catalog List / Grid -->
+<div class="flex flex-col gap-space-md mt-space-sm" id="dishes-container">
+<!-- Item 1: Chicken Burger -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="burgers" data-diet="non-veg" data-id="item_1" data-name="Chicken Burger" data-price="199">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Chicken Burger" class="w-full h-full object-cover" data-alt="Gourmet artisanal grilled chicken burger stacked with toasted sesame brioche bun, melting yellow smoked cheese, crisp butterhead lettuce, herb garlic mayo spread, high-end warm studio lighting, gourmet restaurant food photography." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzK0mfgH1VzrVHmxKRi3umSoC97o-z7A0ycahdadwVXshzN1JCr9vwg3iCtdtJdivnQ0AD_hxgoACqTbdJS_ZC65b2Wc4KSW9QenIYWEKKoA1mj5Jx7RjsMZ4hKmn7iPXvwfJgh5KE2Hx4Er0YJV8xseOqfat5p-fz4HdfqdGOo0UKMK3h-tE1ddkLV0Aiu-9sHv8z27t62UE8LvJbX89JutLcwCmiX9dyvKoRo9c"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Non-Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Chicken Burger</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">In Stock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Juicy grilled chicken patty with smoked cheese &amp; herb mayo on a toasted bun.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹199</span>
+</div>
+<div class="action-slot" data-target="item_1">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 2: Margherita Pizza -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="pizza" data-diet="veg" data-id="item_2" data-name="Margherita Pizza" data-price="249">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Margherita Pizza" class="w-full h-full object-cover" data-alt="Wood-fired classic Italian Margherita pizza with charred bubbly crust, bright red San Marzano tomato sauce, fresh buffalo mozzarella medallions, aromatic green basil leaves, and extra virgin olive oil drizzle in warm rustic lighting." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv9fKGwKYnuz1cYkOZfxgIH9PUJuVbCtRlL3DZ7cSlw2t3EYmYeGXOeKXXNuBhMyC7SUUWsCuwTXfPdB16EEgk5ZKSZsd4ruLUtwV8EVGhklwySpd8KajsQZUJcRCQagd0quP_CME2-JBKlmUyNUvUi7Yt904eD7HeS3iK_-KKU8OVfABKMDyUI6t3kwoBgYHJMTRBtmPLRvFhYdVCyIqvIzC-fU4t4-bzmcrcxOM"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Margherita Pizza</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">In Stock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            San Marzano tomato sauce, fresh mozzarella, aromatic basil &amp; extra virgin olive oil.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹249</span>
+</div>
+<div class="action-slot" data-target="item_2">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 3: Chicken Biryani -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="main" data-diet="non-veg" data-id="item_3" data-name="Chicken Biryani" data-price="299">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Chicken Biryani" class="w-full h-full object-cover" data-alt="Dum cooked fragrant royal Chicken Biryani served in a dark ceramic bowl, long-grain basmati saffron rice, tender spiced chicken cuts, garnished with crisp golden fried onions and fresh coriander sprigs, warm festive illumination." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuKz-7BvRomCbVnMRzhk5ontw5LDLaPePxMAZ1Glqiw_uUVqpKOVZgUZrL6xqR5jCdFioxDPPidQ4RCR9TZgtuacpTbbLMSf7ZAYDn9kK58TCGgd4HIDLpz_Ip0m69zGZ7RIznQxJCv_MJP6U-RAlehXemAJOCJI8Sg4trdgngFJfQFyupSW-deaX4Mod9DvcjsNU9VBk-xx0EotLBadBaHs95I7T9zp9aMwnCPYE"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Non-Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Chicken Biryani</h3>
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed-variant font-label-md text-[11px] shrink-0 font-bold">Chef's Pick</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Aromatic dum basmati rice layered with tender saffron chicken &amp; roasted whole spices.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹299</span>
+</div>
+<div class="action-slot" data-target="item_3">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 4: Paneer Tikka -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="starters" data-diet="veg" data-id="item_4" data-name="Paneer Tikka" data-price="229">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Paneer Tikka" class="w-full h-full object-cover" data-alt="Tandoor charred fresh paneer tikka cubes skewered with bell peppers and onions, coated in vibrant orange spiced yogurt marinade, lemon wedges and mint chutney on the side, steam rising, warm earthy background." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqCeCXXQcdA1Yqq4_JTTzwpIoO_PWa8-DlpymiCwBECaJ6m3chKel-4EXg9nf-sRCWwzUFmScTJE-jN7Vn8cPghHv-YiJV_xzoxION_6g_qoQtlFbGcH2gM62tyGcERuXifu77ukW1jx1NuZxiwtwg0tUmvpI4g4Uaf75FTt5s7ZQG-vI8m2xwdINn-lMan0ELaG1jzJqr1vkWJvavtKMvOHg3gC0nkoTKY6zYXH8"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Paneer Tikka</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">In Stock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Charred cottage cheese cubes marinated in spiced yogurt, capsicum &amp; house masala.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹229</span>
+</div>
+<div class="action-slot" data-target="item_4">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 5: French Fries -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="starters" data-diet="veg" data-id="item_5" data-name="French Fries" data-price="99">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="French Fries" class="w-full h-full object-cover" data-alt="Golden crispy salted french fries served upright in parchment paper within a rustic wire basket, rosemary sprinkle, dipping smoked chili aioli cup nearby, warm cozy dining ambiance." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsD6TcK680lEn07z1B2Z8TWRWLtE87qD7vA43EgAGYpf5skDRMaLA4MZEfpvkIzDk8Xbn9CcCG38Pu5tt6xFPAZG7-D4yuVApshV5ib97f71KwTcsFu30y2HsIrYrIH-SszEaohDEORJP5AdRXC8je0Tn2YUtsbWoaHxIqTSJsVBKSH0YNiI3brppmErm5Ts-KYW9P3S75hNz1H7zeSe5w3RGXA14-FFhcOJ-F6Ew"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">French Fries</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">Popular</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Crisp golden salted hand-cut fries with signature house dipping sauce.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹99</span>
+</div>
+<div class="action-slot" data-target="item_5">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 6: Chocolate Brownie -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="desserts" data-diet="veg" data-id="item_6" data-name="Chocolate Brownie" data-price="149">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Chocolate Brownie" class="w-full h-full object-cover" data-alt="Decadent warm dark chocolate fudge brownie with visible toasted walnut chunks, rich molten chocolate drizzle flowing down sides, dusting of powdered sugar, dessert parlor aesthetic." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7vijdpWakvsdJGjOuIiIA3I6HZDzqBT6rcKuQ99lqu4LbjDCK9vPij2WlwvFk94rLqPOAwlJrbM6nTnLl5CIMGVBGgu-PpPC1NxfKYhosBXo9ujY9EDf-GwEbnZIKQopP_Cc7j_kaXkW77gSl-tR5SivJTX84KmOvj86-aGEm15-Cnl0zywoqJFxMQEOaH6MGSdrS3W0pChol71KKwJnsqKoD470l808nix8c1R8"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Chocolate Brownie</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">In Stock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Warm fudge walnut brownie with dark chocolate ganache drizzle.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹149</span>
+</div>
+<div class="action-slot" data-target="item_6">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 7: Cold Coffee -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="beverages" data-diet="veg" data-id="item_7" data-name="Cold Coffee" data-price="119">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Cold Coffee" class="w-full h-full object-cover" data-alt="Iced creamy cold coffee frappe in a tall textured glass with rich espresso foam head, chocolate syrup ribbons along glass interior, coffee beans scattered on light wood table." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAub6r__tUFfDg2hudyhd2qPoXlbD17GxSDhTEWiu_OXP3LnC7cHkjHJSy-jmKociZXdQgwb0zK0kmvV9L6vPW11Kv0eY5o5tddI8WMXqaeZR9INSdUQbPhNulYhoIX0mN2QkP7LXImRqhTqauQ9o9_-yFGHckzh2aY3FiKcmtqpwR0LSwVNw3G4lswGLZrF0mtfGC0yl4zir2Xg8sONlbbSxdblEdD7sDKn0MPCTs"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Cold Coffee</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">Chilled</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Creamy brewed espresso frappe blended with chilled milk &amp; vanilla crema.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹119</span>
+</div>
+<div class="action-slot" data-target="item_7">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 8: Fresh Lime Soda -->
+<article class="dish-card w-full bg-surface-container-low rounded-2xl p-space-md shadow-sm transition-all flex gap-space-md relative overflow-hidden" data-category="beverages" data-diet="veg" data-id="item_8" data-name="Fresh Lime Soda" data-price="79">
+<div class="w-28 h-28 shrink-0 rounded-xl overflow-hidden relative shadow-inner bg-surface-container">
+<img alt="Fresh Lime Soda" class="w-full h-full object-cover" data-alt="Sparkling refreshing fresh lime soda in a condensation frosted glass, floating green lime wedges, crushed ice cubes, crushed fresh mint sprigs, rock salt rim, bright natural morning daylight." loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb6f7o_zAKPoOzE_djW6L7-JbQqMLMUs75UWAJqlbw4ezN3qNYNpMve3mjHs0hciN3vea6aUy-nr1EMBY-bOcCnz3qAoEKaVXhkkSqBxm2vRykcJ4YwCY-q2hHEbeQbqnCOtqD1HUxJHLC5faFTfJaOEavqrhqILjnXo5QlMLdtyGKPVGdFkAg8luZvwyQOOvust-t-wmbs_6vM_D5b91OBmL3ylB_b_5VyY5nD7E"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm text-[10px] font-bold text-inverse-on-surface flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+        </span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-xs">
+<h3 class="font-title-sm text-title-sm text-on-surface truncate">Fresh Lime Soda</h3>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-secondary font-label-md text-[11px] shrink-0">Refreshing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+            Sparkling soda with freshly pressed mint, Persian lime, and Himalayan rock salt.
+          </p>
+</div>
+<div class="flex items-center justify-between mt-space-sm">
+<div class="flex flex-col">
+<span class="font-currency-display text-currency-display text-primary">₹79</span>
+</div>
+<div class="action-slot" data-target="item_8">
+<button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty Search State -->
+<div class="hidden flex-col items-center justify-center py-16 px-space-md text-center" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[32px]">soup_kitchen</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface">No matching dishes</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+      We couldn't find culinary items matching that query. Try a different dish or category.
+    </p>
+<button class="mt-space-md h-9 px-space-md rounded-xl bg-surface-container-highest text-on-surface font-label-md text-label-md active:scale-95 transition-transform" id="reset-filter-btn">
+      Reset Filters
+    </button>
+</div>
+<!-- Persistent Floating Bill Bar (Tactile Order Summary Drawer) -->
+<aside class="fixed bottom-20 left-4 right-4 z-40 max-w-md mx-auto transition-transform duration-300 transform translate-y-32" id="floating-order-pill">
+<div class="bg-inverse-surface text-inverse-on-surface p-3 pl-4 rounded-2xl shadow-xl flex items-center justify-between backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-sm shadow-sm" id="cart-item-badge">
+          3
+        </div>
+<div class="flex flex-col">
+<span class="text-[11px] font-label-md text-inverse-on-surface/70 uppercase tracking-wider">Current Ticket</span>
+<span class="font-currency-display text-base text-inverse-on-surface" id="cart-subtotal-display">₹647</span>
+</div>
+</div>
+<a class="h-10 px-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-1.5 active:scale-95 transition-all" data-path="cart" href="#">
+<span>Review Order</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div>
+<script>
+  (function initSavorMenu() {
+    const MENU_ITEMS = [
+      { id: 'item_1', name: 'Chicken Burger', category: 'burgers', price: 199 },
+      { id: 'item_2', name: 'Margherita Pizza', category: 'pizza', price: 249 },
+      { id: 'item_3', name: 'Chicken Biryani', category: 'main', price: 299 },
+      { id: 'item_4', name: 'Paneer Tikka', category: 'starters', price: 229 },
+      { id: 'item_5', name: 'French Fries', category: 'starters', price: 99 },
+      { id: 'item_6', name: 'Chocolate Brownie', category: 'desserts', price: 149 },
+      { id: 'item_7', name: 'Cold Coffee', category: 'beverages', price: 119 },
+      { id: 'item_8', name: 'Fresh Lime Soda', category: 'beverages', price: 79 }
+    ];
+
+    // Local Storage Cart Schema: { [itemId]: { name, price, qty } }
+    const STORAGE_KEY = 'savor_cart';
+    
+    function loadCart() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) return JSON.parse(stored);
+      } catch (e) {
+        console.warn('Storage unavailable', e);
+      }
+      // Initial default mock sync matching shell (3 items)
+      return {
+        item_1: { name: 'Chicken Burger', price: 199, qty: 1 },
+        item_2: { name: 'Margherita Pizza', price: 249, qty: 1 },
+        item_5: { name: 'French Fries', price: 99, qty: 2 }
+      };
+    }
+
+    let cart = loadCart();
+
+    function saveCart() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      } catch (e) {}
+      renderCartBar();
+      updateAllItemSlots();
+    }
+
+    const searchInput = document.getElementById('menu-search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const pills = document.querySelectorAll('.category-pill');
+    const cards = document.querySelectorAll('.dish-card');
+    const emptyState = document.getElementById('empty-state');
+    const resultsCountText = document.getElementById('results-count-text');
+    const activeCategoryLabel = document.getElementById('active-category-label');
+    const floatingBar = document.getElementById('floating-order-pill');
+    const cartBadge = document.getElementById('cart-item-badge');
+    const cartSubtotal = document.getElementById('cart-subtotal-display');
+    const resetFilterBtn = document.getElementById('reset-filter-btn');
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    function filterDishes() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const category = card.getAttribute('data-category');
+        const matchesCategory = (currentCategory === 'all') || (category === currentCategory);
+        const matchesSearch = !searchQuery || name.includes(searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+
+      resultsCountText.textContent = `${visibleCount} item${visibleCount === 1 ? '' : 's'} ready`;
+    }
+
+    // Stepper & Add to Cart component renderer
+    function renderSlot(container, itemId) {
+      const currentQty = cart[itemId] ? cart[itemId].qty : 0;
+      if (currentQty <= 0) {
+        container.innerHTML = `
+          <button class="add-to-cart-btn h-9 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 shadow-sm transition-transform">
+            <span class="material-symbols-outlined text-[16px]">add</span>
+            <span>Add</span>
+          </button>
+        `;
+        const addBtn = container.querySelector('.add-to-cart-btn');
+        addBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const itemMeta = MENU_ITEMS.find(m => m.id === itemId);
+          if (itemMeta) {
+            cart[itemId] = { name: itemMeta.name, price: itemMeta.price, qty: 1 };
+            saveCart();
+          }
+        });
+      } else {
+        container.innerHTML = `
+          <div class="flex items-center h-9 bg-surface-container rounded-xl overflow-hidden shadow-inner">
+            <button class="qty-btn-minus w-8 h-full flex items-center justify-center text-on-surface hover:bg-surface-container-highest active:scale-90 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">${currentQty === 1 ? 'delete' : 'remove'}</span>
+            </button>
+            <span class="w-7 text-center font-currency-display text-sm text-on-surface select-none">${currentQty}</span>
+            <button class="qty-btn-plus w-8 h-full flex items-center justify-center text-primary hover:bg-surface-container-highest active:scale-90 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">add</span>
+            </button>
+          </div>
+        `;
+        const minusBtn = container.querySelector('.qty-btn-minus');
+        const plusBtn = container.querySelector('.qty-btn-plus');
+
+        minusBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (cart[itemId].qty > 1) {
+            cart[itemId].qty -= 1;
+          } else {
+            delete cart[itemId];
+          }
+          saveCart();
+        });
+
+        plusBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          cart[itemId].qty += 1;
+          saveCart();
+        });
+      }
+    }
+
+    function updateAllItemSlots() {
+      document.querySelectorAll('.action-slot').forEach(slot => {
+        const itemId = slot.getAttribute('data-target');
+        renderSlot(slot, itemId);
+      });
+    }
+
+    function renderCartBar() {
+      const keys = Object.keys(cart);
+      const totalCount = keys.reduce((acc, k) => acc + (cart[k].qty || 0), 0);
+      const totalPrice = keys.reduce((acc, k) => acc + ((cart[k].qty || 0) * cart[k].price), 0);
+
+      if (totalCount > 0) {
+        cartBadge.textContent = totalCount;
+        cartSubtotal.textContent = '₹' + totalPrice;
+        floatingBar.classList.remove('translate-y-32');
+        floatingBar.classList.add('translate-y-0');
+      } else {
+        floatingBar.classList.add('translate-y-32');
+        floatingBar.classList.remove('translate-y-0');
+      }
+
+      // Sync shell cart indicators if present in document
+      document.querySelectorAll('[data-path="cart"] .min-w-\\[20px\\], [data-path="cart"] .w-4').forEach(badge => {
+        badge.textContent = totalCount;
+      });
+    }
+
+    // Search Input listeners
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (searchQuery.length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+      filterDishes();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearSearchBtn.classList.add('hidden');
+      searchInput.focus();
+      filterDishes();
+    });
+
+    resetFilterBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearSearchBtn.classList.add('hidden');
+      currentCategory = 'all';
+      pills.forEach(p => {
+        p.classList.remove('bg-inverse-surface', 'text-inverse-on-surface');
+        p.classList.add('bg-surface-container-high', 'text-on-surface');
+        if (p.getAttribute('data-category') === 'all') {
+          p.classList.add('bg-inverse-surface', 'text-inverse-on-surface');
+          p.classList.remove('bg-surface-container-high', 'text-on-surface');
+        }
+      });
+      activeCategoryLabel.textContent = 'All Offerings';
+      filterDishes();
+    });
+
+    // Pill Tab Switching
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-inverse-surface', 'text-inverse-on-surface');
+          p.classList.add('bg-surface-container-high', 'text-on-surface');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface');
+        pill.classList.add('bg-inverse-surface', 'text-inverse-on-surface');
+
+        currentCategory = pill.getAttribute('data-category');
+        activeCategoryLabel.textContent = pill.textContent.trim();
+        filterDishes();
+      });
+    });
+
+    // Initial render
+    updateAllItemSlots();
+    renderCartBar();
+    filterDishes();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-lg"><div class="flex justify-around items-center h-16 px-space-md max-w-md mx-auto"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[48px] h-12 transition-all select-none text-primary font-label-lg" data-path="menu" href="#"><span class="material-symbols-outlined text-[24px]">restaurant_menu</span><span class="font-label-md text-label-md">Menu</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[48px] h-12 text-on-surface-variant hover:text-on-surface transition-all select-none relative" data-path="cart" href="#"><div class="relative"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="absolute -top-1 -right-2.5 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center">3</span></div><span class="font-label-md text-label-md">Cart</span></a></div></nav></body></html>

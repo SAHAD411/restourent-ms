@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "error": "#ba1a1a", "primary-fixed-dim": "#ffb59c", "on-primary-fixed": "#390c00", "surface-container-low": "#f0f5f0", "inverse-on-surface": "#edf2ed", "inverse-primary": "#ffb59c", "secondary-fixed-dim": "#c4c7c3", "secondary-container": "#dde0dc", "primary": "#a73400", "on-secondary-fixed-variant": "#444844", "tertiary-fixed": "#ffdbd0", "on-error": "#ffffff", "on-secondary-container": "#606460", "background": "#f6fbf5", "on-surface": "#181d1a", "on-secondary-fixed": "#191c1a", "surface-container-high": "#e5e9e4", "tertiary-container": "#ca4a20", "primary-container": "#cb4914", "outline": "#8d7168", "surface": "#f6fbf5", "outline-variant": "#e1bfb5", "secondary": "#5b5f5c", "primary-fixed": "#ffdbcf", "on-secondary": "#ffffff", "on-background": "#181d1a", "on-primary-fixed-variant": "#822700", "surface-bright": "#f6fbf5", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "tertiary": "#a83206", "surface-tint": "#ab3600", "surface-variant": "#dfe4df", "surface-container-lowest": "#ffffff", "inverse-surface": "#2c322e", "on-surface-variant": "#594139", "error-container": "#ffdad6", "on-tertiary-container": "#fffbff", "secondary-fixed": "#e0e3df", "on-tertiary-fixed-variant": "#852300", "surface-dim": "#d7dbd6", "tertiary-fixed-dim": "#ffb59f", "on-tertiary-fixed": "#3a0a00", "surface-container-highest": "#dfe4df", "on-primary-container": "#fffbff", "surface-container": "#ebefea" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "currency-display": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.015em", fontWeight: "600" }], "currency-display": ["1.5rem", { lineHeight: "1.75rem", letterSpacing: "-0.02em", fontWeight: "700" }], "title-md": ["1.25rem", { lineHeight: "1.625rem", letterSpacing: "-0.01em", fontWeight: "600" }], "display-lg": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.02em", fontWeight: "600" }], "title-sm": ["1.125rem", { lineHeight: "1.5rem", fontWeight: "600" }], "body-md": ["0.875rem", { lineHeight: "1.25rem", fontWeight: "400" }], "body-lg": ["1rem", { lineHeight: "1.5rem", fontWeight: "400" }], "body-sm": ["0.75rem", { lineHeight: "1rem", fontWeight: "400" }], "headline-lg-mobile": ["1.375rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Savor Restaurant Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5RDL9uBLYzJ30OKIU7UPvd0Nt4zL9JZPS9H8m7M4xx2EK6wQpYjyMXvEq54ul8cihHCgKPI0ednw-lg6-jbIHmm6TETR-gqFU5w5dhlxhaGSWhKqOJGQqTTYBjpVeibX89SMRor-RlFZW1ueotdPQjuFPUFC-ci2MxX0JodUpZLaPJoL9wk39exitsfPNVBrOCstW6MfkxoUIKBccygI6nqmG5_xW8xkbBLNIxQ0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface truncate">Savor Restaurant</span><span class="font-label-md text-label-md text-on-surface-variant truncate hidden sm:inline">• Cart</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">table_restaurant</span><span class="font-body-sm text-body-sm truncate">T-04 • Server Alex</span></div></div></div><div class="flex items-center gap-space-sm shrink-0"><a class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface active:scale-95" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-primary text-on-primary font-label-md text-label-md rounded-full flex items-center justify-center">3</span></a><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIgyYDB6SahafVEA1ezb0CdICySb8sswGj1xMTA-fppgE_5bx94uyI9wPiXZtKP_eUXHlxvGdGGi_oBSd2ady92hTr7V_4YKk1Sv7PuJEEQB_cSuVz0kKiYPtQCogM1aLlOCtQ-KnoI8lXqFPj_Rn5zSX7Ct-cHyqZPlsYZpjhxiOvr5hJUhGKVwhr9zDG_mv8RJx5tsIzXRdKySHySyttU4abkR7yjH7wvqE_aNQ"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-sm pb-space-lg flex flex-col gap-space-md max-w-lg mx-auto w-full">
+<!-- Top Action Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<a class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" data-path="menu" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</a>
+<div>
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Your Order</h1>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md" id="header-badge">3 items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review culinary selections &amp; checkout</p>
+</div>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-error-container text-on-surface-variant hover:text-on-error-container font-label-md text-label-md active:scale-95 transition-all" id="btn-clear-cart" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Clear</span>
+</button>
+</div>
+<!-- Order Mode Switcher -->
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-xl">
+<button class="order-type-btn py-2 px-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 bg-inverse-surface text-inverse-on-surface shadow-sm transition-all" id="type-dinein" onclick="selectOrderType('dinein')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_restaurant</span>
+<span>Dine-in (T-04)</span>
+</button>
+<button class="order-type-btn py-2 px-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface transition-all" id="type-takeaway" onclick="selectOrderType('takeaway')" type="button">
+<span class="material-symbols-outlined text-[18px]">takeout_dining</span>
+<span>Takeaway</span>
+</button>
+</div>
+<!-- Cart Items Container -->
+<div class="flex flex-col gap-space-sm" id="cart-list">
+<!-- Items dynamically populated via JS -->
+</div>
+<!-- Empty State -->
+<div class="hidden flex flex-col items-center justify-center text-center p-space-xl bg-surface-container-low rounded-xl" id="empty-state">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant mb-space-sm">
+<span class="material-symbols-outlined text-[44px]">dinner_dining</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-1">Your cart is empty</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mb-space-md">Looks like you haven't indulged yet! Explore chef's specialties and aromatic preparations.</p>
+<a class="px-space-md py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-2 shadow-md active:scale-95 transition-all" data-path="menu" href="#">
+<span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+<span>Explore Menu</span>
+</a>
+</div>
+<!-- Promo & Special Instructions -->
+<div class="flex flex-col gap-space-sm" id="cart-extras">
+<!-- Promo code input -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">sell</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant outline-none uppercase font-semibold" id="coupon-input" placeholder="Promo code (e.g. SAVOR10)" type="text"/>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-all" id="coupon-btn" onclick="applyCoupon()" type="button">
+          Apply
+        </button>
+</div>
+<!-- Chef note / Instructions -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">edit_note</span>
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant outline-none" id="special-note" placeholder="Special cooking instructions or allergies..." type="text"/>
+</div>
+</div>
+<!-- Bill Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3" id="bill-summary-card">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Payment Summary</span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> Taxes Included
+        </span>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between items-center">
+<span>Item Subtotal</span>
+<span class="font-label-lg text-label-lg text-on-surface" id="bill-subtotal">₹0</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="flex items-center gap-1">
+<span>GST &amp; Restaurant Taxes</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant" title="CGST 2.5% + SGST 2.5%">info</span>
+</span>
+<span class="font-label-lg text-label-lg text-on-surface" id="bill-tax">₹0</span>
+</div>
+<div class="flex justify-between items-center" id="row-packaging">
+<span>Service &amp; Hospitality Fee</span>
+<span class="font-label-lg text-label-lg text-on-surface" id="bill-fee">₹25</span>
+</div>
+<div class="hidden flex justify-between items-center text-primary" id="row-discount">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">redeem</span>
+<span>Promo Discount (10%)</span>
+</span>
+<span class="font-label-lg text-label-lg font-bold text-primary" id="bill-discount">-₹0</span>
+</div>
+</div>
+<div class="h-px bg-surface-container-high my-1"></div>
+<div class="flex justify-between items-baseline">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">To Pay</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inclusive of all local cesses</span>
+</div>
+<div class="text-right">
+<span class="font-currency-display text-currency-display text-primary" id="bill-grand-total">₹0</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-3.5 px-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-between shadow-md active:scale-[0.98] transition-all" id="btn-place-order" onclick="openOrderModal()" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Confirm &amp; Fire to Kitchen</span>
+</span>
+<span class="font-bold" id="btn-order-price">₹0</span>
+</button>
+<a class="w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 active:scale-[0.99] transition-all text-center" data-path="menu" href="#">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Add More Dishes</span>
+</a>
+</div>
+</div>
+</div>
+<!-- ORDER SUCCESS / KOT CONFIRMATION MODAL -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-margin bg-on-surface/50 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300" id="order-modal">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-xl p-space-md shadow-2xl flex flex-col gap-space-sm transform scale-95 transition-all duration-300 max-h-[795px] overflow-y-auto" id="modal-card">
+<!-- Modal Success Header -->
+<div class="flex flex-col items-center text-center pt-2">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-2 shadow-sm animate-bounce">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Order Fired to Kitchen!</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chefs at Savor are now preparing your feast</p>
+</div>
+<!-- Ticket Receipt Card -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-2 relative">
+<!-- Punch Hole Visual Delights -->
+<div class="flex justify-between items-center pb-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Order Token</span>
+<div class="font-title-sm text-title-sm text-primary font-bold" id="modal-order-id">#SVR-8492</div>
+</div>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Table &amp; Mode</span>
+<div class="font-label-lg text-label-lg text-on-surface" id="modal-order-mode">Table 04 (Dine-in)</div>
+</div>
+</div>
+<div class="h-px bg-surface-container-high"></div>
+<!-- Ordered Items Ledger -->
+<div class="flex flex-col gap-1.5 text-on-surface font-body-sm text-body-sm" id="modal-items-list">
+<!-- Populated dynamically -->
+</div>
+<div class="h-px bg-surface-container-high"></div>
+<div class="flex justify-between items-center pt-1 font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Time Placed</span>
+<span class="font-label-md text-label-md text-on-surface" id="modal-time">Just now</span>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Settlement Method</span>
+<span class="font-label-md text-label-md text-on-surface">Pay at Counter / Terminal</span>
+</div>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-title-sm text-title-sm text-on-surface">Total Bill</span>
+<span class="font-currency-display text-currency-display text-primary" id="modal-grand-total">₹0</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 active:scale-98 transition-all" onclick="printKitchenTicket()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Print Kitchen KOT &amp; Bill</span>
+</button>
+<button class="w-full py-3 px-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1 active:scale-98 transition-all shadow-md" onclick="closeOrderModalAndReset()" type="button">
+<span>Start New Order</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function() {
+  const DEFAULT_ITEMS = [
+    {
+      id: "item-1",
+      name: "Hyderabadi Chicken Biryani",
+      price: 299,
+      quantity: 1,
+      isVeg: false,
+      desc: "Fragrant basmati rice with slow-cooked spiced chicken & saffron mirchi ka salan",
+      imgAlt: "A steaming authentic handi of Hyderabadi chicken biryani garnished with crispy golden fried onions, fresh mint leaves, roasted cashew nuts and whole spices in warm lighting"
+    },
+    {
+      id: "item-2",
+      name: "Artisanal Margherita Pizza",
+      price: 249,
+      quantity: 1,
+      isVeg: true,
+      desc: "San Marzano sauce, fresh torn mozzarella di bufala, basil, cold-pressed olive oil",
+      imgAlt: "Wood fired neapolitan margherita pizza with blistered crust, melted fresh mozzarella cheese, vivid green basil leaves, and aromatic extra virgin olive oil drizzle"
+    },
+    {
+      id: "item-3",
+      name: "Fresh Mint Lime Soda",
+      price: 79,
+      quantity: 1,
+      isVeg: true,
+      desc: "Crisp sparkling limeade muddled with garden mint, rock salt and organic cane syrup",
+      imgAlt: "Tall crystal highball glass filled with sparkling iced lime soda, lime wheel garnish, muddled fresh green mint leaves, effervescent bubbles on a warm wooden bistro table"
+    }
+  ];
+
+  let cart = [];
+  let orderType = 'dinein';
+  let discountApplied = false;
+
+  function loadCart() {
+    try {
+      const stored = localStorage.getItem('savor_cart');
+      if (stored) {
+        cart = JSON.parse(stored);
+      } else {
+        cart = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+        saveCart();
+      }
+    } catch (e) {
+      cart = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+    }
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem('savor_cart', JSON.stringify(cart));
+    } catch (e) {}
+  }
+
+  function updateGlobalBadge(count) {
+    const badges = document.querySelectorAll('header [data-path="cart"] span, nav [data-path="cart"] span');
+    badges.forEach(b => {
+      if (b.classList.contains('absolute') || b.parentElement.classList.contains('relative')) {
+        b.textContent = count;
+        b.style.display = count > 0 ? 'flex' : 'none';
+      }
+    });
+    const headerBadge = document.getElementById('header-badge');
+    if (headerBadge) {
+      headerBadge.textContent = count + (count === 1 ? ' item' : ' items');
+    }
+  }
+
+  window.selectOrderType = function(type) {
+    orderType = type;
+    const btnDinein = document.getElementById('type-dinein');
+    const btnTakeaway = document.getElementById('type-takeaway');
+    const feeRow = document.getElementById('row-packaging');
+
+    if (type === 'dinein') {
+      btnDinein.className = "order-type-btn py-2 px-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 bg-inverse-surface text-inverse-on-surface shadow-sm transition-all";
+      btnTakeaway.className = "order-type-btn py-2 px-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface transition-all";
+      feeRow.querySelector('span:first-child').textContent = "Service & Hospitality Fee";
+    } else {
+      btnTakeaway.className = "order-type-btn py-2 px-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 bg-inverse-surface text-inverse-on-surface shadow-sm transition-all";
+      btnDinein.className = "order-type-btn py-2 px-3 rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface transition-all";
+      feeRow.querySelector('span:first-child').textContent = "Eco-Packaging & Takeaway Fee";
+    }
+    renderSummary();
+  };
+
+  window.modifyQty = function(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+
+    item.quantity += delta;
+    if (item.quantity <= 0) {
+      const el = document.getElementById(`cart-item-${id}`);
+      if (el) {
+        el.classList.add('opacity-0', '-translate-x-4', 'transition-all', 'duration-200');
+        setTimeout(() => {
+          cart = cart.filter(i => i.id !== id);
+          saveCart();
+          renderCart();
+        }, 200);
+        return;
+      }
+      cart = cart.filter(i => i.id !== id);
+    }
+    saveCart();
+    renderCart();
+  };
+
+  window.removeItem = function(id) {
+    const el = document.getElementById(`cart-item-${id}`);
+    if (el) {
+      el.classList.add('opacity-0', 'scale-95', 'transition-all', 'duration-200');
+      setTimeout(() => {
+        cart = cart.filter(i => i.id !== id);
+        saveCart();
+        renderCart();
+      }, 200);
+    } else {
+      cart = cart.filter(i => i.id !== id);
+      saveCart();
+      renderCart();
+    }
+  };
+
+  window.applyCoupon = function() {
+    const input = document.getElementById('coupon-input');
+    const btn = document.getElementById('coupon-btn');
+    if (!input) return;
+    const val = input.value.trim().toUpperCase();
+
+    if (val === 'SAVOR10' || val === 'WELCOME') {
+      discountApplied = true;
+      btn.textContent = 'Applied!';
+      btn.className = "px-3 py-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-md text-label-md active:scale-95 transition-all";
+      input.disabled = true;
+    } else {
+      btn.textContent = 'Invalid';
+      setTimeout(() => { btn.textContent = 'Apply'; }, 1500);
+      discountApplied = false;
+    }
+    renderSummary();
+  };
+
+  function renderSummary() {
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const tax = Math.round(subtotal * 0.05);
+    const packagingFee = subtotal > 0 ? (orderType === 'takeaway' ? 35 : 25) : 0;
+    const discount = discountApplied ? Math.round(subtotal * 0.10) : 0;
+    const grandTotal = Math.max(0, subtotal + tax + packagingFee - discount);
+
+    document.getElementById('bill-subtotal').textContent = `₹${subtotal}`;
+    document.getElementById('bill-tax').textContent = `₹${tax}`;
+    document.getElementById('bill-fee').textContent = `₹${packagingFee}`;
+    
+    const discRow = document.getElementById('row-discount');
+    if (discountApplied) {
+      discRow.classList.remove('hidden');
+      document.getElementById('bill-discount').textContent = `-₹${discount}`;
+    } else {
+      discRow.classList.add('hidden');
+    }
+
+    document.getElementById('bill-grand-total').textContent = `₹${grandTotal}`;
+    const orderBtnPrice = document.getElementById('btn-order-price');
+    if (orderBtnPrice) orderBtnPrice.textContent = `₹${grandTotal}`;
+
+    return { subtotal, tax, packagingFee, discount, grandTotal };
+  }
+
+  function renderCart() {
+    const list = document.getElementById('cart-list');
+    const emptyState = document.getElementById('empty-state');
+    const extras = document.getElementById('cart-extras');
+    const billCard = document.getElementById('bill-summary-card');
+    const totalCount = cart.reduce((acc, it) => acc + it.quantity, 0);
+
+    updateGlobalBadge(totalCount);
+
+    if (cart.length === 0) {
+      list.innerHTML = '';
+      emptyState.classList.remove('hidden');
+      extras.classList.add('hidden');
+      billCard.classList.add('hidden');
+      return;
+    }
+
+    emptyState.classList.add('hidden');
+    extras.classList.remove('hidden');
+    billCard.classList.remove('hidden');
+
+    let html = '';
+    cart.forEach(item => {
+      const lineTotal = item.price * item.quantity;
+      const vegDotClass = item.isVeg ? 'bg-[#2E6930]' : 'bg-primary';
+      const vegBoxClass = item.isVeg ? 'text-[#2E6930]' : 'text-primary';
+
+      html += `
+        <div id="cart-item-${item.id}" class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm transition-all duration-200">
+          <div class="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+            <img src="placeholder" data-alt="${item.imgAlt}" class="w-full h-full object-cover">
+            <div class="absolute top-1 left-1 w-3.5 h-3.5 bg-surface rounded flex items-center justify-center shadow-xs">
+              <span class="w-1.5 h-1.5 rounded-full ${vegDotClass}"></span>
+            </div>
+          </div>
+          
+          <div class="flex flex-col min-w-0 flex-1">
+            <div class="flex items-start justify-between gap-1">
+              <h4 class="font-title-sm text-title-sm text-on-surface truncate">${item.name}</h4>
+              <button type="button" onclick="removeItem('${item.id}')" class="text-on-surface-variant hover:text-error p-1 rounded-md active:scale-90 transition-all" title="Remove Item">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+            
+            <div class="flex items-center justify-between mt-1">
+              <div class="flex flex-col">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">₹${item.price} each</span>
+                <span class="font-title-sm text-title-sm text-primary font-bold">₹${lineTotal}</span>
+              </div>
+
+              <!-- Tactile Quantity Stepper -->
+              <div class="flex items-center rounded-lg bg-surface-container p-0.5 shadow-xs">
+                <button type="button" onclick="modifyQty('${item.id}', -1)" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-container-high active:scale-90 transition-all font-bold">
+                  <span class="material-symbols-outlined text-[16px]">remove</span>
+                </button>
+                <span class="w-7 text-center font-currency-display text-label-lg text-on-surface">${item.quantity}</span>
+                <button type="button" onclick="modifyQty('${item.id}', 1)" class="w-7 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-on-surface hover:bg-surface-container-high active:scale-90 transition-all font-bold">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    list.innerHTML = html;
+    renderSummary();
+  }
+
+  document.getElementById('btn-clear-cart').addEventListener('click', () => {
+    if (cart.length === 0) return;
+    if (confirm('Clear all culinary items from this order?')) {
+      cart = [];
+      saveCart();
+      renderCart();
+    }
+  });
+
+  window.openOrderModal = function() {
+    if (cart.length === 0) return;
+    const totals = renderSummary();
+    const token = Math.floor(1000 + Math.random() * 9000);
+    const orderIdStr = `#SVR-${token}`;
+
+    document.getElementById('modal-order-id').textContent = orderIdStr;
+    document.getElementById('modal-order-mode').textContent = orderType === 'dinein' ? 'Table 04 • Dine-in' : 'Express Takeaway Counter';
+    document.getElementById('modal-grand-total').textContent = `₹${totals.grandTotal}`;
+    
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('modal-time').textContent = `Today at ${timeStr}`;
+
+    const modalList = document.getElementById('modal-items-list');
+    modalList.innerHTML = cart.map(i => `
+      <div class="flex justify-between items-center py-0.5">
+        <span class="truncate pr-2">${i.name} × ${i.quantity}</span>
+        <span class="font-semibold shrink-0">₹${i.price * i.quantity}</span>
+      </div>
+    `).join('');
+
+    const modal = document.getElementById('order-modal');
+    const modalCard = document.getElementById('modal-card');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modalCard.classList.remove('scale-95');
+    modalCard.classList.add('scale-100');
+  };
+
+  window.printKitchenTicket = function() {
+    const originalText = event.currentTarget.innerText;
+    const btn = event.currentTarget;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Transmitting to Kitchen...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check</span><span>Ticket Printed &amp; KOT Synced</span>`;
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">print</span><span>Reprint Kitchen KOT</span>`;
+      }, 2000);
+    }, 1000);
+  };
+
+  window.closeOrderModalAndReset = function() {
+    const modal = document.getElementById('order-modal');
+    const modalCard = document.getElementById('modal-card');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modalCard.classList.remove('scale-100');
+    modalCard.classList.add('scale-95');
+
+    // Clear cart and state
+    cart = [];
+    saveCart();
+    discountApplied = false;
+    const couponInput = document.getElementById('coupon-input');
+    if (couponInput) {
+      couponInput.value = '';
+      couponInput.disabled = false;
+    }
+    const couponBtn = document.getElementById('coupon-btn');
+    if (couponBtn) couponBtn.textContent = 'Apply';
+    
+    renderCart();
+  };
+
+  loadCart();
+  renderCart();
+})();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-lg"><div class="flex justify-around items-center h-16 px-space-md max-w-md mx-auto"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[48px] h-12 text-on-surface-variant hover:text-on-surface transition-all select-none" data-path="menu" href="#"><span class="material-symbols-outlined text-[24px]">restaurant_menu</span><span class="font-label-md text-label-md">Menu</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[48px] h-12 transition-all select-none relative text-primary font-label-lg" data-path="cart" href="#"><div class="relative"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="absolute -top-1 -right-2.5 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center">3</span></div><span class="font-label-md text-label-md">Cart</span></a></div></nav></body></html>
